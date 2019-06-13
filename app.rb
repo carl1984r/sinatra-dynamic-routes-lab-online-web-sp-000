@@ -31,8 +31,19 @@ class App < Sinatra::Base
     @ops = params[:operation]
     @num1 = params[:number1]
     @num2 = params[:number2]
-    h = [:add => +, :subtract => -, :multiply => *, :divide => /]
     binding.pry
+    case @ops
+when "add"
+  "#{@num1.to_i+@num2.to_i}"
+when 1..20
+  "The tank is almost empty. Quickly, find a gas station!"
+when 21..70
+  "You should be ok for now."
+when 71..100
+  "The tank is almost full."
+else
+  "Error: capacity has an invalid value (#{capacity})"
+end
 
     "#{}"
   end
