@@ -7,4 +7,10 @@ class App < Sinatra::Base
     "#{@test_name.reverse!}"
   end
 
+  get "/square/:number" do
+    @test_number = params[:number]
+    "#{@test_number.to_i*@test_number.to_i}"
+    binding.pry
+  end
+
 end
