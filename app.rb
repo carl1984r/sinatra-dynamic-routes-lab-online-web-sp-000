@@ -18,4 +18,10 @@ class App < Sinatra::Base
     "#{(@test_phr + ' ')*@test_num.to_i}"
   end
 
+  get "/say/:word1/:word2/:word3/:word4/:word5" do
+    @test_num = params[:number]
+    @test_phr = params[:phrase]
+    "#{(@test_phr + ' ')*@test_num.to_i}"
+  end
+
 end
