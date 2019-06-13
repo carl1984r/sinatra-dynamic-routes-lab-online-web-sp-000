@@ -32,7 +32,7 @@ class App < Sinatra::Base
     @num1 = params[:number1]
     @num2 = params[:number2]
     binding.pry
-    
+
     "#{}"
   end
 
