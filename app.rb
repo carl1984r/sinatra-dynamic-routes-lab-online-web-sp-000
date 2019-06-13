@@ -27,4 +27,13 @@ class App < Sinatra::Base
     "#{@w1} #{@w2} #{@w3} #{@w4} #{@w5}."
   end
 
+  get "/:operation/:number1/:number2" do
+    @ops = params[:operation]
+    @num1 = params[:number1]
+    @num2 = params[:number2]
+    binding.pry
+    
+    "#{}"
+  end
+
 end
