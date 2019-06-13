@@ -12,4 +12,11 @@ class App < Sinatra::Base
     "#{@test_number.to_i**2}"
   end
 
+  get "/say/:number/:phrase" do
+    @test_num = params[:number]
+    @test_phr = params[:phrase]
+    "#{@test_phr*@test_num}"
+    binding.pry
+  end
+
 end
